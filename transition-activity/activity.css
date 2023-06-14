@@ -1,1 +1,49 @@
+button {
+    background-color: ghostwhite;
+    transition: background-color 2s;
+  }
+  
+  button:hover {
+    background-color: cornflowerblue;
+  }
+.hamburger {
+  width: 30px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+}
 
+.hamburger div {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  transition: transform 0.3s ease;
+}
+
+#top {
+  top: 0;
+  transform-origin: left center;
+}
+
+#middle {
+  top: 50%;
+  transform-origin: left center;
+}
+
+#bottom {
+  bottom: 0;
+  transform-origin: left center;
+}
+
+.hamburger.active #top {
+  transform: rotate(45deg);
+}
+
+.hamburger.active #middle {
+  opacity: 0;
+}
+
+.hamburger.active #bottom {
+  transform: rotate(-45deg);
+}
